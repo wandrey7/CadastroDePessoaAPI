@@ -4,7 +4,7 @@ import jakarta.validation.constraints.*;
 
 public class PersonDTO {
     @NotBlank(message = "The name field is mandatory")
-    @Size(min=10)
+    @Size(min=10, max = 50, message = "The name field must contain at least 10 characters")
     private String name;
 
     @NotBlank(message = "The email field is mandatory")
