@@ -33,12 +33,6 @@ public class PersonController {
     @Autowired
     PersonMapper personMapper;
 
-    @GetMapping("/")
-    public ResponseEntity helloRoute(){
-        return ResponseEntity.status(HttpStatus.OK).body(Map.of("message", "Visite a documentação: https://sistema-de-cadastros.fly.dev/doc",
-                "github", "https://github.com/wandrey7/CadastroDePessoaAPI"));
-    }
-
     @Operation(summary = "Cria uma Pessoa", description = "Cria uma Pessoa")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200",
